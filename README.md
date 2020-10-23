@@ -28,3 +28,6 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
+
+
+![2020-10-22 (1)](https://user-images.githubusercontent.com/67846486/96954452-0af0f180-14b9-11eb-89e9-2b2bc19f7856.png)
