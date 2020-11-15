@@ -25,34 +25,39 @@ $("#searchBtn").on("click", function () {
 
 });
 
+function searchHistory(cityName) {
+  searchHst.empty();
+  const searchHstArr = JSON.parse(localStorage.getItem("searchHistory"));
 
-function weatherStats(cityName) {
+}
+function weatherStats(cityName, temp, humidity, windspeed) {
 
+  cityName.text(cityName)
+  temp.text(`Temperature: ${temp} F`);
+  windspd.text(`windspeed: ${windspeed} MPH`);
+  currentDate.text(`(${current})`);
+  humidity.text(`Humidity: ${humidity}`);
 
-  const queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + apiKey;
+}
+
+function weather(city) {
+  let queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + apiKey;
 
   $.ajax({
     url: queryUrl,
-    type: "GET",
-    dataType: "json",
-    success: function (response) {
-      console.log(response);
+    method: "GET"
+  })
 
-
-      $("#weather").empty();
-
-       temperature = response.data[0].text("Temperature: "+ temF + "F")
-       humidity = response.data[0].text("Humidity: " + results[i].main.humidity)
-      
-
-
-
-    }
-
-    
-  });
-
-
-
+    .then(function (weatherData) {
+      const cityObject = {
+        temp: weatherData.main.name,
+        humidity: weatherData.main.name,
+        windspeed: weatherData.wind.speed,
+        cityNmae: weatherData.name,
+      }
+    })
 }
+
+
+
 
