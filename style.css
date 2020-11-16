@@ -1,7 +1,33 @@
-.hide {
-    display: none;
+.forecast {
+    margin-top: 25px;
+    border: solid 1px #8fa6ec;
+    margin-left: 5%;
+    min-width: 600px;
+    padding: 12px 15px 15px 15px;
+    height: 50%;
+}
+.forcast-container h1 {
+    margin-top: 25px;
+    margin-left: 5%;
+}
+.forcast-card {
+    margin-left: 60px;
+    width: 170px;
+    height: auto;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    background-color: #08598f;
+}
+.forcast-container .card-text {
+    margin-bottom: 15px;
+    padding: 10px 30px 5px 10px;
 }
 
-.show {
-    display: block;
+.forcast-card h3 {
+    margin: 5px;
+}
+
+.forcast-card img {
+    margin-left: 10%;
 }
